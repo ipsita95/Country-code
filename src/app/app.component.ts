@@ -27,10 +27,12 @@ export class AppComponent  {
       this.item = data;
       console.log(this.item.ip);
       console.log(data);
-      this.openModal;
     });
+     
   }
+
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
+    console.log("load");
   }
 }
