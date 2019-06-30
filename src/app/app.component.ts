@@ -20,13 +20,14 @@ export class AppComponent  {
     this.configOption3.OptionTextTypes.push(ContentOptionsEnum.Flag);
     this.configOption3.OptionTextTypes.push(ContentOptionsEnum.CountryName);
     this.configOption3.OptionTextTypes.push(ContentOptionsEnum.CountryPhoneCode);
+    
 
    }
    ngOnInit(): void {
     // Make the HTTP request:
     this.http.get('https://ipapi.co/json/').subscribe(data => {
       this.item = data;
-      console.log(this.item.ip);
+      console.log(this.item.country_calling_code);
       console.log(data);
     });
      
