@@ -2,6 +2,7 @@ import { Component,TemplateRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConfigurationOptions, ContentOptionsEnum }from 'intl-input-phone';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -35,4 +36,7 @@ export class AppComponent  {
     this.modalRef = this.modalService.show(template);
     console.log("load");
   }
+  	phoneForm = new FormGroup({
+		phone: new FormControl(undefined, [Validators.required])
+	});
 }

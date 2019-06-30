@@ -8,9 +8,13 @@ import {HttpClientModule} from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { IntlInputPhoneModule } from 'intl-input-phone';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,HttpClientModule,BsDropdownModule,ModalModule.forRoot(), IntlInputPhoneModule ],
+  imports:      [ BrowserModule, FormsModule,HttpClientModule,BsDropdownModule,ModalModule.forRoot(), IntlInputPhoneModule,
+		ReactiveFormsModule,
+		NgxIntlTelInputModule ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
